@@ -1,27 +1,21 @@
 import './App.css';
 
-function App() {
+const People = (props) => {
+  return (
+    <>
+      <h1>Name: {props.name}</h1>
+      <h2>Role: {props.role}</h2>
+      <h2>Experience: {props.experience}</h2> 
+    </>
+  )
+}
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <People name='Revanth' role='systems' experience={2}/>
+      <People name='Krishna' role='systems' experience={1}/>
+      <People name='vanth' role='web' experience={6}/>
     </div>
   );
 }
